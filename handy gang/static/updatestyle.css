@@ -1,0 +1,36 @@
+body{
+    background-image: url(reset.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+}
+
+#name{
+margin: 10px 10px 10px 140px;
+padding:10px 15px;
+border-radius:4px;
+}
+#password{
+    margin: 10px 10px 10px 100px;
+    padding:10px 15px;
+    border-radius:4px;
+}
+#confirmpassword{
+    margin: 10px 10px 10px 10px;
+    padding:10px 15px;
+    border-radius:4px;
+}
+.inputBox label{
+    margin-left: 20px;
+    font-size:25px;
+    font-weight:bolder;
+}
+form{
+    
+    display:block;
+    margin-top:100px;
+    margin-left:700px;
+}
+h1{
+    margin-top:300px;
+}

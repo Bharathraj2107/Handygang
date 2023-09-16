@@ -1,0 +1,337 @@
+/* css reset */
+*{
+    margin:0;
+    padding:0;
+}
+/* css variables */
+:root{
+    --navbar-height:59px;
+}
+#navbar{
+    display:flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding:20px;
+    padding-left:5%;
+    padding-right:5%;
+    
+}
+/* navigation bar :logo and image (entire img and li tag to move up and down)*/
+#navbar::before{
+    content:"";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity:0.4;
+}
+#logo{    
+margin:10px 28px;
+font-family:'Playball';
+font-weight: 700;
+font-size: 1.8rem;
+cursor: pointer;
+
+}
+
+/* navigation bar :list styling (img height and widht setter)*/
+#logo img{    
+    margin:3px 5px;
+    height:59px; 
+}
+/* making bg color black and then display the content on it */
+#navbar{
+    position:relative;
+    background-color: gold;
+}
+#navbar ul{
+    display:flex;
+    font-family:'Playball', cursive;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    float:left;
+
+}
+#navbar ul li a{
+    display:block; 
+    color:black;
+    /* padding:50px; */
+    margin-left: 150px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight:200;
+    font-size: 1.8rem;   
+}
+#navbar ul li a:hover{
+color:black;
+background-color:white; 
+}
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:20px 200px;
+    justify-content: center;
+    align-items: center;
+    height:503px;
+    background:url('http://127.0.0.1:5000/static/bg.jpg')center/cover;
+    background-repeat: no-repeat;
+    
+}
+#home::before{
+    content:"";
+    position: absolute;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity:0.89;
+}
+/* services section */
+#services{
+    /* margin: 1px; */
+    display: flex;
+    padding: 3px 6px;
+}
+ #services-container{
+    background-color: rgb(43,108,163);
+ }
+ #services-img{
+   display:block;
+   margin-left:230px;
+   margin-right:auto;
+   
+ }
+ #services .box{
+     border:2px solid brown;
+     padding:34px;
+     margin:20px 6px;
+     border-radius: 28px;
+     background-color: #cdcdcd;
+
+ }
+ #carpenter{
+  text-align: center;
+  margin:10px 30px 20px 30px;
+  padding:10px 15px;
+  border-radius:7px;
+  
+ }
+ #plumbing{
+    text-align: center;
+    margin:10px 30px 20px 120px;
+    padding:10px 14px;
+    border-radius:7px;
+
+ }
+ #electrical{
+  
+  text-align: center;
+  margin:10px 30px 20px 110px;
+  padding:10px 14px;
+  border-radius:7px;
+
+ }
+ #painting{
+    text-align: center;
+    margin:10px 30px 20px 120px;
+   padding:10px 14px;
+   border-radius:7px;
+
+ }
+ #maintenance{
+    text-align: center;
+    margin:10px 30px 20px 120px;
+    padding:10px 14px;
+    border-radius:7px;
+    
+ }
+ #img-names button:hover{
+  background-color:white;
+  font-weight: bolder;
+  cursor: pointer;
+ }
+ #img-names{
+    list-style: none;
+    display:flex;
+    color:white;
+ }
+ 
+ #services .box img{
+     height:160px;
+     display:block;
+     margin:auto;
+     width:160px;
+    
+ }
+ #services-img{
+    width:50%;
+    height:50%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    
+    }
+ #services .box p{
+    font-family: sans-serif;
+ }
+ /* client section */
+ #client-section{
+    height:344px;
+    background-image: url("http://127.0.0.1:5000/static/aboutus.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-color: white;
+
+ }
+ #clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #client-para{
+    margin-left:480px;
+    font-size:25px;
+    padding:10px;
+    word-spacing:10px;
+    margin-bottom: 20px;
+    
+ }
+ #clients .client-item img{
+    height:230px;
+    padding:34px;
+ }
+ #client-section::before{
+    content:"";
+    position:absolute;
+    /* background: url('http://127.0.0.1:5000/static/bg.jpg'); */
+    width:100%;
+    height:100%;
+    z-index: -1;
+    opacity:0.8;
+ }
+
+/* utility classes */
+.h-primary{
+    font-size:2.3rem;
+    padding:12px;
+    font-family: 'Playball', cursive;
+
+}
+.h-secondary{
+    font-size:2.8rem;
+    padding:12px;
+}
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Playball', cursive;
+    font-size: 3.8rem;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+.btn{
+ padding:6px 200px;
+  border:2px solid white;
+  background-color: brown;
+  color:white;
+  margin:17px;
+  border-radius:10px ;
+  font-size: 1.5rem;
+  cursor:pointer;
+}
+.center{
+    text-align: center;
+}
+/* add section */
+#ADD-box{
+display:flex;
+flex-direction: column;
+width:30%;
+margin:20px auto 20px auto;
+}
+label{
+    margin-top:10px;
+    margin-bottom:20px;
+    font-weight:bolder;
+    font-size:20px;
+    color:white;
+}
+input{
+    padding:10px 10px;
+    border-radius:6px;
+    margin-bottom:50px; 
+}
+form{
+    display:flex;
+    flex-direction:column;
+}
+[type="submit"]{
+    margin:20px auto;
+
+    padding:10px 10px;
+ 
+    background-color:gold; 
+    width: 30%;
+}
+ /*#ADDbtn{ /*see the button size it is taking the margin of input
+    margin-top:20px;
+    padding:10px 10px;
+    margin-bottom:20px;
+    background-color:gold;
+    font-weight:bolder;
+    font-size:20px;
+}*/
+#ADD{
+        background-color: rgb(43,108,163);
+}
+footer{
+    background-color: black;
+    color:white;
+    padding:9px 20px;
+}
+#num{
+    font-weight: bold;
+    text-align:end;
+    padding-left: 300px;
+    }
+#start-hd{
+    margin-right:500px;
+ 
+    }
+#start-para{
+margin-right:500px;
+font-size: 10px;
+font-family: sans-serif;
+}
+.btn{
+ margin-right:500px;
+}
+.form-group{
+    margin-left:300px;
+}
+#num{
+margin-left:650px;
+}
+#addservice{
+    padding:10px 10px;
+    border-radius:6px;
+    margin-bottom:50px;
+}
+#hout{
+padding:10px 15px;
+border-radius:4px;
+}
+#hout a:hover{
+    background-color:none;
+}
+/*logo design*/
+
+
+

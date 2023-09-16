@@ -1,0 +1,87 @@
+
+#container{
+    display:flex;
+    color: black;
+    border:2px solid black;
+    margin:0px 10px 20px 10px;
+}
+#left{
+    width:30%;
+}
+#right{
+
+    width:70%;
+}
+#ogreen{
+    color: limegreen;
+    margin-left:10px;
+    font-size:1.5em;
+}
+#phonenum{
+    margin:10px 10px 50px 20px;
+    padding:10px 10px;
+    background-color:limegreen;
+    color: white;
+    font-size:1.2em;
+}
+#summary{
+    margin-top:20px;
+    margin-left:20px;
+}
+address{
+    margin-left:20px;
+    font-size:1.2em;
+}
+h2{
+  margin-left:20px;
+  margin-top:30px;
+  font-weight:bolder;
+}
+h1{
+    text-align: center;
+    background-color: gold;
+    font-weight:bolder;
+    padding:20px 20px;
+}
+form{
+    display:flex;
+    justify-content:flex-end;
+}
+#locations{
+    margin:5px 20px 10px 20px;
+    padding:10px;
+    justify-content:end;
+    font-weight:bolder;
+    font-size:20px;
+    
+}
+#submit{
+margin:5px 40px 10px 10px;
+padding:10px 30px 10px;
+font-weight:bolder;
+font-size:20px;
+}
+h3{
+    font-weight:bolder;
+    font-size:20px;
+}
+#area{
+    margin-left:20px;
+    font-weight:bolder;
+    font-size:25px;
+    margin-top:20px;
+}
+#services{
+   font-size:20px;
+}
+#chome{
+    margin:-55px 400px 50px 0px;
+    padding:10px 10px;
+    
+    font-weight:bolder;
+    font-size:20px;
+
+}
+#chome a{
+    text-decoration: none;
+}

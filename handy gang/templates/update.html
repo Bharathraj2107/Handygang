@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/updatestyle.css" />
+    <title>update password</title>
+</head>
+<body>
+   <center><h1>{{m}}</h1></center>
+    <form action="/update" method="post" id="register_form">
+        <div class="inputBox">
+    <label for="name">Name</label>
+    <input type="text" id="name",name="name"placeholder="name"required="required" />
+    <i></i>
+  </div>
+  <div class="inputBox">
+<label for="password">Password</label>
+    <input type="password" id="password"name="password" placeholder="password"required="required" />
+    <i></i>
+  </div>
+  <div class="inputBox">
+<label for="confirmpassword">ConfirmPassword</label>
+    <input type="password" id="confirmpassword" name="confirmpassword"placeholder="confirm password" required="required" />
+  </div>
+  <label for="submit"></label>
+  <input type="submit" name="submit">
+    </form>
+</body>
+</html>

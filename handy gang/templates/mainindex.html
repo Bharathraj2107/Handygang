@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE HANDY GUY</title>
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/mainstyle.css" />
+    
+    <link
+      rel="stylesheet"
+      media="Screen and (max-width: 1014px)"
+      href="phone.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100&family=Playball&family=Playfair:wght@300&family=Source+Sans+Pro:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100&family=Playball&family=Playfair:wght@300&family=Source+Sans+Pro:wght@900&display=swap");
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <p>THE HANDY GANG</p>
+      </div>
+      <ul>
+        <li class="item"><a href="#home">Home</a></li>
+        <li class="item"><a href="#services-container">Services</a></li>
+        <li class="item"><a href="#client-section">About Us</a></li>
+        <li class="item"><a href="#ADD">ADD</a></li>
+        <li class="item">
+          <a href="logout"><button id="hout">Log out</button></a>
+        </li>
+      </ul>
+    </nav>
+    <section id="home">
+      <h1 id="start-hd" class="h1-primary">THE HANDY GANG</h1>
+      <p id="start-para">
+        Handy Gang is a team of skilled professionals who offer a wide range of
+        services to help you maintain and improve your home or office. <br>Our team
+        includes carpenters, plumbers, electricians, painters, and maintenance
+        experts <br>who are dedicated to providing high-quality workmanship and
+        exceptional customer service.
+      </p>
+      <button class="btn">call now</button>
+    </section>
+    <h1 class="h-primary center">our services</h1>
+    <section id="services-container">
+      <div id="services-img">
+        <img src="http://127.0.0.1:5000/static/Services.png" alt="" />
+        <div id="img-names">
+          <a href="/carpenter"><button id="carpenter">Carpentry</button></a>
+          <a href="/plumbing"><button id="plumbing">plumbing</button></a>
+          <a href="/electrical"><button id="electrical">electrical</button></a>
+          <a href="/painting"><button id="painting">painting</button></a>
+          <a href="/maintenance"
+            ><button id="maintenance">maintenance</button></a
+          >
+        </div>
+      </div>
+    </section>
+    <section id="client-section">
+      <h1 class="h-primary center">About us</h1>
+      <p id="client-para">
+        Our handyman services offer a wide range of services to meet your home
+        improvement needs. From carpentry to plumbing, painting to maintenance,
+        and electrical services,our team of skilled professionals can handle any
+        job you need done. Whether you're looking to repair a leaky faucet or
+        install new light fixtures, we've got you covered. <br />
+        <br />
+        With years of experience in the industry, we pride ourselves on
+        delivering high-quality workmanship and exceptional customer service. So
+        why wait? Contact us today to schedule your next home improvement
+        project!
+      </p>
+    </section>
+    <div id="ADD">
+      <h1 class="h-primary center">ADD</h1>
+      <div id="ADD-box">
+        <form action="/ADD" method="POST">
+          <label for="map">map</label>
+          <textarea name="map" id="map" cols="30" rows="10" name="map">
+          </textarea>
+          <label for="phone">phone</label>
+          <input type="phone" name="phone" placeholder="enter phone number" />
+          <label for="shopname">shopname</label>
+          <input type="text" name="shopname" placeholder="enter shopname" />
+          <label for="address">address</label>
+          <input type="address" name="address" placeholder="enter address" />
+          <label for="timing">timing</label>
+          <input type="text" name="timing" placeholder="enter the timings" />
+          <label for="service">services</label>
+          <input type="text" name="service" placeholder="enter the services" />
+          <label for="ownername">ownername</label>
+          <input
+            type="text"
+            name="ownername"
+            placeholder="enter the owner name"
+          />
+          <label for="location">locations</label>
+
+          <!-- <select name="location" id="location">
+            <option value="" type="location" name="location"id="formop" placeholder="enter the location"></option> -->
+          <input
+            type="location"
+            name="location"
+            placeholder="enter the location"
+          />
+          <label for="service-type">Service-Type</label>
+          <select name="serviceavailable" id="addservice">
+            <option value="">service-type</option>
+            <option value="carpentry">carpentry</option>
+            <option value="plumbing">plumbing</option>
+            <option value="painting">painting</option>
+            <option value="maintenance">maintenance</option>
+            <option value="electrical">electrician</option>
+          </select>
+          <input id="ADDbtn" type="submit" />
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="center">
+        copyright &copy:www.handygang.com.All rights reserved!;
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/style.css" />
+    <title>Document</title>
+    <style>
+      .vl {
+        border-left: 6px solid green;
+        height: 500px;
+      }
+      .vl {
+        border-left: 6px solid green;
+        height: 800px;
+        position: absolute;
+        left: 50%;
+        margin-left:-3px;
+        top: 0;
+      }
+      .notice{
+        display: flex;
+        justify-content: space-between;
+        background-color: greenyellow;
+        color: blue;
+        padding: 25px;
+        width: 50%;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 20px;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="i" onclick="remove(this)" class="notice"> <!--here this refers to the particular function bcoz we might hv used the same function somewhere else so here this refers to particularly this func-->
+      <p>{{m}}</p><!--when we click the remove function is called -->
+      <p>X</p>
+    </div>
+      <div id="body">
+     <!-- <center><p id="pswupdate">{{m}}</p></center> -->
+      <div class="box" id="box1">
+        <div class="form">
+          <div id="login">
+          <h2>Sign in</h2>
+          <form action="/signin" method="post"id="register_form">
+          <div class="inputBox">
+            <input type="text" name="name"required="required" />
+            <span>Username</span>
+            <i></i>
+          </div>
+          <div class="inputBox">
+            <input type="password" name="Password"required="required" />
+            <span>Password</span>
+            <i></i>
+          </div>
+          <div class="links">
+           <a data-value="box3" onclick="togleform(event);">Forgot Password?</a> <!-- the data-value is used bcoz of same function and data-value helps to -->
+                                                                                     <!-- identify the the attribute value we have clicked like box1,box2,box3 -->
+            <a data-value="box2" onclick="togleform(event);" id="sin">Sign Up</a>
+          </div>
+          <input type="submit" value="Sign In" />
+        </form>
+
+      </div>
+          <div class="vl"></div>
+          <div>
+            <img id="logo" src="http://127.0.0.1:5000/static/google.jpg" id="img1" alt="" />
+          </div>
+         
+            <button id="go"onclick="window.open('https://www.google.com');">Continue with Google</button>
+          <div>
+            <img id="flogo" src="http://127.0.0.1:5000/static/facebook.png" id="img" alt="" />
+          </div>
+            <button id="fac" onclick="window.open('https://www.facebook.com');">continue with Facebook</button>
+        </div>
+      </div>
+    
+    <br>
+      <div class="box" id="box2" style="display: none;">
+        <div class="form">
+          <h2>Sign Up</h2>
+            <div id="signup">
+              <form action="/signup" method="post" id="register_form">
+                <div class="inputBox">
+            <input type="text" name="name"required="required" />
+            <span>Username</span>
+            <i></i>
+          </div>
+          <div class="inputBox">
+            <input type="password" name="password" required="required" />
+            <span>Password</span>
+            <i></i>
+          </div>
+          <div class="inputBox">
+            <input type="number"name="phone" required="required" />
+            <span> Phone</span>
+            <i></i>
+          </div>
+          <div class="links">
+             <a data-value="box1" onclick="togleform(event);" id="sin">Sign in</a><!--when we click on sign in which block should display that data-value we hv to give so it will display only that and others will be hidden -->
+          </div>
+          <input type="submit" value="Sign Up" />
+         </form>
+        </div>
+          <div class="vl"></div>
+          <div>
+            <img id="logo" src="http://127.0.0.1:5000/static/google.jpg" id="img1" alt="" />
+          </div>
+            <button id="go"onclick="window.open('https://www.google.com');">Continue with Google</button>
+          
+          <div>
+            <img id="flogo" src="http://127.0.0.1:5000/static/facebook.png" id="img" alt="" />
+          </div>
+          <button id="fac"onclick="window.open('https://www.facebook.com');">continue with Facebook</button>
+        </div>
+</div>
+
+        <div class="box" id="box3" style="display: none;">
+          <div class="form">
+            <h2>Forgot password</h2>
+              <div id="signup">
+                <form action="/update" method="post" id="register_form">
+                  <div class="inputBox">
+              <input type="text" name="name"required="required" />
+              <span>Username</span>
+              <i></i>
+            </div>
+            <div class="inputBox">
+              <input type="password" name="password" required="required" />
+              <span>Password</span>
+              <i></i>
+            </div>
+            <div class="inputBox">
+              <input type="password"name="confirmpassword" required="required" />
+              <span>confirmpassword</span>
+              <i></i>
+            </div>
+            <div class="links">
+              <a data-value="box1" onclick="togleform(event);" id="sin">Sign in</a>  <!--why box 1 here -->
+            </div>
+            <input type="submit" value="Sign Up" />
+           </form>
+          </div>
+</div>
+
+    
+    <script>
+      
+      function remove(el) {  //the remove func is called here the entire div func is passed as parameter(which include the the entire green-box and the x mark )
+          var element = el;  //the value(green-box and x mark) gets stored in the element .with the help of remove func in python the element is removed 
+          element.remove();
+        }
+
+       function togleform(event){ //the event is click so the click gets targeted and takes the data-value from it
+        let id=event.target.getAttribute("data-value");
+        console.log(id);
+        let items=["box1","box2", "box3"];
+        for(let i=0;i<items.length;i++){
+          if(id==items[i]){
+            document.getElementById(items[i]).style.display="block";
+          }
+          
+          else{
+            document.getElementById(items[i]).style.display="none";
+          }
+        }
+      }
+      
+    </script>
+  </body>
+</html>
+        <!-- the working of toggle function  -->
+<!-- the id gets stored with the data-value .items has the data-values it is iterated one by one when the id that is when the event is clicked we get the data-value -->
+<!-- and if it matches then it is displayed or else it is not displayed -->
